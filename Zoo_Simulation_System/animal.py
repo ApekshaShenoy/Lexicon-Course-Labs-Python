@@ -29,3 +29,17 @@ class Animal:
     def get_angry(self):
         self.is_angry = True
         print(f"{self.name} is angry!")
+
+class Herbivore(Animal):
+    def eat(self):
+        if self.is_awake:
+            self.energy = min(5, self.energy + 1)
+            print(f"{self.name} eats plants. Energy is now {self.energy}.")
+
+class Carnivore(Animal):
+    def eat(self):
+        if self.is_awake:
+            self.energy = min(5, self.energy + 2)
+            print(f"{self.name} eats meat. Energy is now {self.energy}.")
+
+
