@@ -2,31 +2,46 @@ from animal import Herbivore, Carnivore
 from visitor import Visitor
 from zookeeper import ZooKeeper
 
+# creating animals
+deer = Herbivore("Deer", 3)
+rabbit = Herbivore("Rabbit", 2)
+lion = Carnivore("Lion", 10)
 
-deer = Herbivore("Deer")
-lion = Carnivore("Lion")
+# keeping animals in a list to manage them easily
+animals = [deer, rabbit, lion]
+
+# creating visitor and zookeeper
 visitor = Visitor("Alice")
 keeper = ZooKeeper("Bob")
 
 print("\n--- Morning ---")
-keeper.feed_all_animals([deer, lion])
-deer.wake_up()
-deer.play()
-lion.wake_up()
-lion.play()
+# animals wake up in the morning
+for animal in animals:
+    animal.wake_up()
 
+# zookeeper feeds all animals
+keeper.feed_all_animals(animals)
+
+# animals play after eating
+for animal in animals:
+    animal.play()
 
 print("\n--- Midday ---")
-visitor.annoy_animal(lion)  
-keeper.calm_animal(lion)     
-lion.play()                  
-deer.play()                   
+# visitor annoys the lion
+visitor.annoy_animal(lion)
+
+# zookeeper calms the animal if it is angry
+keeper.calm_animal(lion)
+
+# animals try to play again
+for animal in animals:
+    animal.play()
 
 print("\n--- Evening ---")
-keeper.feed_all_animals([deer, lion])
-deer.eat()
-lion.eat()
+# feeding animals again in the evening
+keeper.feed_all_animals(animals)
 
 print("\n--- Night ---")
-deer.sleep()
-lion.sleep()
+# animals sleep at night
+for animal in animals:
+    animal.sleep()
