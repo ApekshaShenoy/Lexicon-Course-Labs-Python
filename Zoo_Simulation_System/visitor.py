@@ -9,4 +9,3 @@ class Visitor:
     def annoy_animal(self, animal):
         animal.get_angry()
         print(f"{self.name} annoys {animal.name}.")
-
