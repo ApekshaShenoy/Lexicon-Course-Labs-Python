@@ -53,3 +53,29 @@ class Carnivore(Animal):
         if self.is_awake:
             self.energy = min(5, self.energy + 2)
             print(f"{self.name} eats meat. Energy is now {self.energy}.")
+
+# Concrete species
+
+class Deer(Herbivore):
+    # deer get scared easily
+    def run(self):
+        if self.is_awake and self.energy > 1:
+            self.energy -= 1
+            print(f"{self.name} runs away. Energy is now {self.energy}.")
+
+
+class Rabbit(Herbivore):
+    # rabbits get tired faster
+    def play(self):
+        if self.is_awake and not self.is_angry and self.energy > 2:
+            self.energy -= 2
+            print(f"{self.name} hops around. Energy is now {self.energy}.")
+        else:
+            print(f"{self.name} is too tired to play.")
+
+
+class Lion(Carnivore):
+    # lions roar when angry
+    def roar(self):
+        if self.is_angry:
+            print(f"{self.name} roars loudly!")
