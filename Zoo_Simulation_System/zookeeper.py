@@ -1,14 +1,20 @@
+# zookeeper is responsible for animal care
+
 class ZooKeeper:
     def __init__(self, name):
         self.name = name
 
     def feed_all_animals(self, animals):
+        # feeds every animal in the zoo
+        messages = []
         for animal in animals:
-            if animal.is_awake:
-                animal.eat()
-                print(f"{self.name} feeds {animal.name}.")
+            messages.append(f"{self.name} feeds {animal.name}.")
+            messages.append(animal.eat())
+        return messages
 
     def calm_animal(self, animal):
+        # calms angry animals
         if animal.is_angry:
             animal.is_angry = False
-            print(f"{self.name} calms {animal.name}.")
+            return f"{self.name} calms {animal.name}."
+        return None
