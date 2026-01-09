@@ -20,5 +20,22 @@
 
     <img src="{% static 'AppTwo/image.png' %}" alt="Image">
 
+    <h2>Student List</h2>
+
+    <table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
 </body>
 </html>
