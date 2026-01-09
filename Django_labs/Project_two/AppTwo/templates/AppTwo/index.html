@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'AppTwo/style.css' %}">
+</head>
+<body>
+
+    <h1>{{ welcome_message }}</h1>
+
+    <p>
+        Course: {{ course_name }} <br>
+        Name: {{ my_name }}
+    </p>
+
+    <p>
+        Students today: {{ students_today }}
+    </p>
+
+    <img src="{% static 'AppTwo/image.png' %}" alt="Image">
+
+</body>
+</html>

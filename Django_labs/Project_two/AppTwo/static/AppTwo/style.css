@@ -1,0 +1,16 @@
+body {
+    background-color: #811da2;
+    font-family: Arial;
+}
+
+h1 {
+    color: rgb(225, 225, 235);
+    font-size: 36px;
+}
+
+img {
+    border: 3px solid rgb(111, 107, 107);
+    padding: 5px;
+    width: 300px;   
+    height: auto;   
+}
