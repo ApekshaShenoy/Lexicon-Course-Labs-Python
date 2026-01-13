@@ -2,16 +2,81 @@
 <html>
 <head>
     <title>Support Ticket</title>
+
+    <style>
+        form {
+            max-width: 600px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: start;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            margin-left: 130px;
+            padding: 6px 12px;
+        }
+
+        .errorlist {
+            grid-column: 2;
+            color: red;
+            list-style: none;
+            margin: 4px 0 0 0;
+            padding: 0;
+            font-size: 13px;
+        }
+    </style>
 </head>
+
 <body>
+    <h1>Support Ticket</h1>
 
-<h1>Support Ticket</h1>
+    <form method="post">
+        {% csrf_token %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
+        {{ form.non_field_errors }}
 
+        <div class="form-row">
+            <label for="{{ form.full_name.id_for_label }}">Full name:</label>
+            {{ form.full_name }}
+            {{ form.full_name.errors }}
+        </div>
+
+        <div class="form-row">
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+            {{ form.email.errors }}
+        </div>
+
+        <div class="form-row">
+            <label for="{{ form.message.id_for_label }}">Message:</label>
+            {{ form.message }}
+            {{ form.message.errors }}
+        </div>
+
+        <div class="form-row">
+            <label for="{{ form.category.id_for_label }}">Category:</label>
+            {{ form.category }}
+            {{ form.category.errors }}
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
