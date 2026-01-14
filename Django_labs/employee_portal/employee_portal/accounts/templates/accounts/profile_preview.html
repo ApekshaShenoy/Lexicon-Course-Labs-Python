@@ -1,0 +1,10 @@
+<h1>Employee Profile Preview</h1>
+<p><strong>Username:</strong> {{ user.username }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+{% if profile.portfolio_url %}
+<p><strong>Portfolio/LinkedIn:</strong> <a href="{{ profile.portfolio_url }}">{{ profile.portfolio_url }}</a></p>
+{% endif %}
+{% if profile.profile_picture %}
+<p><strong>Profile Picture:</strong></p>
+<img src="{{ profile.profile_picture.url }}" width="150">
+{% endif %}

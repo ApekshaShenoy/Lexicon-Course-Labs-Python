@@ -1,0 +1,18 @@
+<h1>Register as a new Employee</h1>
+{% if messages %}
+  {% for message in messages %}
+    <p style="color:green;">{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  
+  <h2>Account Details</h2>
+  {{ user_form.as_p }}
+
+  <h2>Onboarding Details</h2>
+  {{ profile_form.as_p }}
+
+  <button type="submit">Register</button>
+</form>
