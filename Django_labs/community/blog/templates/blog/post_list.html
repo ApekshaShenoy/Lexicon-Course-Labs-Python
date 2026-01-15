@@ -1,0 +1,13 @@
+<h1>Community Blog</h1>
+
+{% for post in posts %}
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.content }}</p>
+
+  {% if user.is_authenticated %}
+    <p>Comments visible here</p>
+  {% else %}
+    <p><a href="/accounts/login/">Login to see comments</a></p>
+  {% endif %}
+
+{% endfor %}
