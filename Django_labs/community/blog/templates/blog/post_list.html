@@ -1,13 +1,51 @@
-<h1>Community Blog</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Blog</title>
+</head>
+<body>
+    <h1>Community Blog</h1>
 
-{% for post in posts %}
-  <h2>{{ post.title }}</h2>
-  <p>{{ post.content }}</p>
+    <!-- Login/Logout links -->
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a> | <a href="{% url 'profile' %}">Profile</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a> to see comments and add your own.</p>
+    {% endif %}
 
-  {% if user.is_authenticated %}
-    <p>Comments visible here</p>
-  {% else %}
-    <p><a href="/accounts/login/">Login to see comments</a></p>
-  {% endif %}
+    <hr>
 
-{% endfor %}
+    {% for post in posts %}
+        <div style="margin-bottom: 30px;">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+
+            {% if user.is_authenticated %}
+                <!-- Display comments -->
+                <h3>Comments:</h3>
+                {% for comment in post.comments.all %}
+                    <p><strong>{{ comment.author.username }}:</strong> {{ comment.content }}</p>
+                {% empty %}
+                    <p>No comments yet.</p>
+                {% endfor %}
+
+                <!-- Add comment form -->
+                <form method="post" style="margin-top: 10px;">
+                    {% csrf_token %}
+                    {{ form.content }}
+                    <input type="hidden" name="post_id" value="{{ post.id }}">
+                    <button type="submit">Add Comment</button>
+                </form>
+            {% else %}
+                <p><em>Login to see comments and add your own.</em></p>
+            {% endif %}
+
+        </div>
+        <hr>
+    {% empty %}
+        <p>No posts yet.</p>
+    {% endfor %}
+
+</body>
+</html>
