@@ -1,0 +1,7 @@
+input,output,decoding,tokens_out,constraint_passed,notes
+The process was extremely complicated and difficult to follow for beginners.,The process was extremely complicated and difficult to follow for beginners.,beam,11,True,
+The process was extremely complicated and difficult to follow for beginners.,The process was extremely complicated and difficult to follow for beginners.,sampling,11,True,
+In 2018 I worked on manual sentiment analysis and it was very time consuming.,In 2018 I worked on manual sentiment analysis and it was very time consuming.,beam,14,True,
+In 2018 I worked on manual sentiment analysis and it was very time consuming.,I worked on manual sentiment analysis and it was very time consuming.,sampling,12,True,
+Modern AI systems can now perform complex NLP tasks with high accuracy.,Modern AI systems can now perform complex NLP tasks with high accuracy.,beam,12,True,
+Modern AI systems can now perform complex NLP tasks with high accuracy.,Modern AI systems can now perform complex NLP tasks with high accuracy.,sampling,12,True,

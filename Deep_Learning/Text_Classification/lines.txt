@@ -1,0 +1,3 @@
+The process was extremely complicated and difficult to follow for beginners.
+In 2018 I worked on manual sentiment analysis and it was very time consuming.
+Modern AI systems can now perform complex NLP tasks with high accuracy.
