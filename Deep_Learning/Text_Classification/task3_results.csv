@@ -1,0 +1,5 @@
+input,beam_output,sampling_output,final_output,beam_valid,sampling_valid,retry_used
+The explanation was extremely confusing and hard to understand for most people.,The explanation was extremely confusing and hard to understand for most people.,The explanation was extremely confusing and hard to understand for most people.,The explanation was extremely confusing and hard to understand for most people.,True,True,False
+I am not sure how I feel about this product.,I am not sure how I feel about this product.,I am not sure how I feel about this product.,I am not sure how I feel about this product.,True,True,False
+The meeting happened at 3pm and nothing unusual occurred.,The meeting happened at 3pm and nothing unusual happened.,The meeting happened at 3pm and nothing unusual happened.,The meeting happened at 3pm and nothing unusual happened.,True,True,False
+This system works incredibly well and I love using it.,This system works incredibly well and I love using it.,This system works incredibly well and I love using it.,This system works incredibly well and I love using it.,True,True,False
