@@ -1,0 +1,15 @@
+Reflection:
+
+Task 1 :
+
+I tried it with both chatgpt and calude.
+
+Chatgpt needed no context , most generic response with no content but filling the void.
+
+Surprisingly calude needed context, what type of business plus what is the tone I wanna write this response in.
+
+
+Task 4 :
+
+This had direction, structure , complete context and characters.
+The difference tells you that prompting is really just structured thinking. The quality of the output mirrors the quality of the thought you put in before you type. If you're vague about what you want, the AI will be vague back at you — and call it an apology.
