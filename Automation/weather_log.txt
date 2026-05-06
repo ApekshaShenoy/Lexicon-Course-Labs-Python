@@ -190,3 +190,27 @@
      Wind speed  : 2.27 m/s
 
 ==========================================================
+==========================================================
+  🌍  DAILY WEATHER REPORT
+  Wednesday, 06 May 2026  –  generated at 15:32
+==========================================================
+
+  📍 Stockholm
+     Conditions  : ☀️  Clear sky
+     Temperature : 13.1°C  (feels like 9.8°C)
+     Precipitation: 0.0 mm
+     Wind speed  : 1.7 m/s
+
+  📍 Mangalore
+     Conditions  : ⛈️  Thunderstorm
+     Temperature : 30.6°C  (feels like 34.5°C)
+     Precipitation: 0.0 mm
+     Wind speed  : 4.72 m/s
+
+  📍 New Delhi
+     Conditions  : ⛅  Partly cloudy
+     Temperature : 32.8°C  (feels like 31.9°C)
+     Precipitation: 0.0 mm
+     Wind speed  : 2.42 m/s
+
+==========================================================
